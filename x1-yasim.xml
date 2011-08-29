@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--  
+     Bell X1         : 2011 BARANGER Emmanuel
+
+     sources         : http://en.wikipedia.org/wiki/Bell_X-1
+
+     Wingspan        :   28 ft       (  8.5 m  )
+     Length          :   30 ft 11 in (  9.4 m  )
+     Height          :   10 ft       (  3.3 m  )
+     Empty weight    : 7000 lb       ( 3175 kg )
+     Engine          : Reaction Motors XLR-11-RM3 liquid fuel rocket (6000 lbf)
+     Maximum speed   : 839.5 kts ( Mach 1.26 ) ( 1541 km/h )
+     Service ceiling : 71900 ft  ( 21900 m )
+-->
+
+<airplane mass="7000">
+
+  <!-- Approach configuration -->
+  <approach speed="100" aoa="6">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.4"/>
+    <control-setting axis="/controls/flight/flaps" value="0.4"/>
+    <control-setting axis="/controls/gear/gear-down" value="1"/>
+    <control-setting axis="/controls/flight/spoiler" value="0"/>
+  </approach>
+
+  <!-- Cruise configuration.   -->
+  <cruise speed="800" alt="71900">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="1"/>
+    <control-setting axis="/controls/flight/flaps" value="0.0"/>
+    <control-setting axis="/controls/gear/gear-down" value="0"/>
+    <control-setting axis="/controls/flight/spoiler" value="0"/>
+  </cruise>
+
+  <!-- pilot eyepoint -->
+  <cockpit x="2.198" y="0" z="-0.228"/>
+
+  <fuselage ax="6.902" ay="0" az="-0.952" bx="-6.923" by="0" bz="-0.382" width="1.187" midpoint= "0.25" taper="0.2" />
+
+  <wing x="-0.478" y="0.563" z="-0.584"
+        chord="1.640"
+        length="3.699"
+        taper="0.34"
+        sweep="1"
+        dihedral="0"
+        camber="0.08">
+        <stall aoa="21" width="8" peak="1.3"/>
+        <flap0 start="0.005" end="0.50" lift="1.2" drag="1.1"/>
+        <flap1 start="0.500" end="1.00" lift="1.3" drag="1.2"/>
+        <spoiler start="0" end="0.5" lift="1.3" drag="1.3"/>
+
+        <control-input axis="/controls/flight/flaps" control="FLAP0"/>
+        <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
+        <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
+
+        <control-output control="FLAP0" prop="/surface-positions/flaps-pos-norm"/>
+        <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+
+        <control-speed control="FLAP0" transition-time="4"/>
+        <control-speed control="FLAP1" transition-time="1.5"/>
+  </wing>
+
+  <hstab x="-3.886" y="0" z="0.186"
+         chord="0.861"
+         length="1.746"
+         taper="0.30"
+         sweep="4">
+         <stall aoa="22" width="13" peak="1.5"/>
+         <flap0 start="0.07" end="1.00" lift="1.9" drag="1.4"/>
+
+         <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+         <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+
+         <control-speed control="FLAP0" transition-time="1.5"/>
+  </hstab>
+
+  <vstab x="-3.883" y="0" z="-0.308"
+         chord="1.539"
+         length="1.814"
+         taper="0.35"
+         sweep="18">
+         <stall aoa="27" width="10" peak="1.5"/>
+         <flap0 start="0.07" end="0.87" lift="1.3" drag="1.3"/>
+
+         <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+         <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>
+
+         <control-speed control="FLAP0" transition-time="1.5"/>
+  </vstab>
+
+  <!--  Reaction Motors XLR11
+
+                 source       : http://en.wikipedia.org/wiki/Reaction_Motors_XLR-11
+
+                 type         : liquid-fuel rocket engine
+                 weight       :  210 lb (95 kg)
+                 power        : 6000 lbf
+  -->
+  <jet x="-1.323" y="0" z="-0.594"
+       mass="210"
+       thrust="6000"
+       n1-idle="25"
+       n1-max="100"
+       n2-idle="30"
+       n2-max="105"
+       exhaust-speed="1150"
+       rotation="0">
+       <actionpt x="-4.711" y="0" z="-0.540"/>
+       <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+       <control-input axis="/controls/engines/engine[0]/reheat" control="REHEAT"/>
+  </jet>
+
+  <!-- gear -->
+  <!-- nose -->
+  <gear x="1.994" y="0.000" z="-1.646"
+        retract-time="7"
+        compression="0.24"
+        spring="1.1"
+        damp="1.4">
+        <control-input axis="/controls/flight/rudder" control="STEER" square="false"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        <control-speed control="EXTEND" transition-time="7"/>
+        <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
+  </gear>
+
+  <!-- left main -->
+  <gear x="-0.359" y="0.676" z="-1.536"
+        retract-time="7"
+        compression="0.22"
+        spring="0.85"
+        damp="2">
+        <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        <control-speed control="EXTEND" transition-time="7"/>
+        <control-output control="EXTEND" prop="gear/gear[1]/position-norm"/>
+  </gear>
+
+  <!-- right main -->
+  <gear x="-0.359" y="-0.676" z="-1.536"
+        retract-time="7"
+        compression="0.22"
+        spring="0.85"
+        damp="2">
+        <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        <control-speed control="EXTEND" transition-time="7"/>
+        <control-output control="EXTEND" prop="gear/gear[2]/position-norm"/>
+  </gear>
+
+  <!-- left wing tanks -->
+  <tank x="1" y="0" z="-0.7" jet="true" capacity="2070"/>
+
+  <!-- CG placement -->
+  <ballast x="1" y="0" z="-0.4" mass="900"/>
+
+</airplane>
