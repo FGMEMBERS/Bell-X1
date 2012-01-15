@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-************************************************************************
-Lockheed NF 104A simulation config.
-
-2009-06-26 BARANGER Emmanuel
-************************************************************************
--->
 
 <PropertyList include="x1-base.xml">
 

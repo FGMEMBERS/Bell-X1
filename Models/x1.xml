@@ -173,8 +173,17 @@
 
   <!-- Une ombre pour OSG  -->
   <model>
-    <name>shadowOSG</name>
     <path>Aircraft/Bell-X1/Models/shadow.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.469</z-m>
+    </offsets>
+  </model>
+
+  <!-- Intérieur -->
+  <model>
+    <path>Aircraft/Bell-X1/Models/Interior/interior.xml</path>
   </model>
 
   <!-- Fumée -->
@@ -287,16 +296,6 @@
       <x-m>  0.470 </x-m>
       <y-m>  1.341 </y-m>
       <z-m> -2.010 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Intérieur -->
-  <model>
-    <path>Aircraft/Bell-X1/Models/Interior/interior.xml</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
     </offsets>
   </model>
 

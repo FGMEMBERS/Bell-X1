@@ -4,15 +4,15 @@ OBJECT world
 kids 1
 OBJECT poly
 name "shadow"
-loc -0 -1.468765 -0.000001
+loc 0 0 -0
 data 6
 shadow
-texture "shadow.png"
+texture "../../../../../shadow.png"
 texrep 1 1
 numvert 4
-4.7 0 -4.249999
-4.7 0 4.25
--4.7 0 4.25
+4.699999 0 -4.249999
+4.699999 0 4.25
+-4.7 0 4.249999
 -4.699998 0 -4.25
 numsurf 1
 SURF 0x10

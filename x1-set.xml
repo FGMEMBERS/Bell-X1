@@ -4,8 +4,17 @@
 <PropertyList include="x1-yasim-cnf.xml">
 
   <sim>
+
     <description>Bell X1 (Yasim)</description>
-    <author>Emmanuel BARANGER (3D/FDM)</author>
+    <author>Emmanuel BARANGER (3D/FDM) / Toan PHUC (FDM)</author>
+
+    <rating>
+      <FDM type="int">     2 </FDM>
+      <systems type="int"> 1 </systems>
+      <cockpit type="int"> 1 </cockpit>
+      <model type="int">   3 </model>
+    </rating>
+
   </sim>
 
 </PropertyList>
