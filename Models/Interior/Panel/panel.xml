@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -45,7 +45,7 @@
   <model>
     <path>Aircraft/Bell-X1/Models/Interior/Panel/Instruments/mach/mach.xml</path>
     <offsets>
-      <x-m> 0.139 </x-m>
+      <x-m> 0.141 </x-m>
       <y-m> 0.130 </y-m>
       <z-m> 0.070 </z-m>
     </offsets>
@@ -72,4 +72,3 @@
   </model>
 
 </PropertyList>
-

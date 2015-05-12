@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
+  
   <fx>
-
+    
     <engine-jet>
       <name>engine-jet</name>
       <path>Sounds/jet.wav</path>
@@ -36,7 +36,7 @@
         <max>0.75</max>
       </volume>
     </engine-jet>
-
+    
     <engine>
       <name>whine</name>
       <path>Sounds/turbojet_fan.wav</path>
@@ -54,7 +54,7 @@
         <offset>-0.1</offset>
       </pitch>
     </engine>
-
+    
     <engine-rumble>
       <name>engine-rumble</name>
       <path>Sounds/rumble.wav</path>
@@ -85,7 +85,7 @@
         <max>1</max>
       </volume>
     </engine-rumble>
-
+    
     <engine-whine-external>
       <name>external-whine</name>
       <path>Sounds/turbojet_fan.wav</path>
@@ -118,7 +118,7 @@
         <max>0.6</max>
       </volume>
     </engine-whine-external>
-
+    
     <engine-whine-internal>
       <name>internal-whine</name>
       <path>Sounds/whine.wav</path>
@@ -141,7 +141,7 @@
         <max>0.7</max>
       </volume>
     </engine-whine-internal>
-
+    
     <rumble>
       <name>rumble</name>
       <mode>looped</mode>
@@ -158,7 +158,7 @@
         <factor>.002</factor>
       </volume>
     </rumble>  
-
+    
     <gear>
       <name>gear</name>
       <mode>in-transit</mode>
@@ -170,7 +170,7 @@
         <factor>-0.001</factor>
       </pitch>
     </gear>
-
+    
     <gear>
       <name>gear-lock</name>
       <path>Sounds/gear-lck.wav</path>
@@ -181,7 +181,7 @@
         </equals>
       </condition>
     </gear>
-
+    
     <gear>
       <name>gear-lock</name>
       <path>Sounds/gear-lck.wav</path>
@@ -192,7 +192,7 @@
         </equals>
       </condition>
     </gear>
-
+    
     <gear>
       <name>gear</name>
       <mode>in-transit</mode>
@@ -204,7 +204,7 @@
         <factor>-0.001</factor>
       </pitch>
     </gear>
-
+    
     <gear>
       <name>gear-lock</name>
       <path>Sounds/gear-lck.wav</path>
@@ -215,7 +215,7 @@
         </equals>
       </condition>
     </gear>
-
+    
     <gear>
       <name>gear-lock</name>
       <path>Sounds/gear-lck.wav</path>
@@ -226,7 +226,7 @@
         </equals>
       </condition>
     </gear>
-
+    
     <gear>
       <name>gear</name>
       <mode>in-transit</mode>
@@ -238,7 +238,7 @@
         <factor>-0.001</factor>
       </pitch>
     </gear>
-
+    
     <gear>
       <name>gear-lock</name>
       <path>Sounds/gear-lck.wav</path>
@@ -249,7 +249,7 @@
         </equals>
       </condition>
     </gear>
-
+    
     <gear>
       <name>gear-lock</name>
       <path>Sounds/gear-lck.wav</path>
@@ -260,7 +260,7 @@
         </equals>
       </condition>
     </gear>
-
+    
     <squeal>
       <name>squeal</name>
       <path>Sounds/squeal.wav</path>
@@ -286,7 +286,7 @@
         <offset>1.2</offset>
       </pitch>
     </squeal>
-
+    
     <squeal>
       <name>squeal</name>
       <path>Sounds/squeal.wav</path>
@@ -312,7 +312,7 @@
         <offset>1.2</offset>
       </pitch>
     </squeal>
-
+    
     <squeal>
       <name>squeal</name>
       <path>Sounds/squeal.wav</path>
@@ -338,7 +338,7 @@
         <offset>1.2</offset>
       </pitch>
     </squeal>
-
+    
     <flap>
       <name>flaps</name>
       <mode>in-transit</mode>
@@ -348,7 +348,7 @@
         <factor>0.15</factor>
       </volume>
     </flap>
-
+    
     <spoiler>
       <name>spoilers</name>
       <mode>in-transit</mode>
@@ -358,7 +358,7 @@
         <factor>0.15</factor>
       </volume>
     </spoiler>
-
+    
     <wind>
       <name>wind</name>
       <mode>looped</mode>
@@ -376,7 +376,7 @@
         <offset>1.25</offset>
       </pitch>
     </wind>
-
+    
     <stall>
       <name>stall</name>
       <path>Sounds/stall.wav</path>
@@ -386,7 +386,7 @@
         <min>90.0</min>
       </volume>
     </stall>
-
+    
   </fx>
-
+  
 </PropertyList>
