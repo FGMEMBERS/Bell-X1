@@ -18,6 +18,16 @@
       <model type="int">   3 </model>
     </rating>
 
+    <tags>
+      <tag>bell</tag>
+      <tag>1940s</tag>
+      <tag>experimental</tag>
+      <tag>retractable-gear</tag>
+      <tag>supersonic</tag>
+      <tag>rocket</tag>
+      <tag>single-engine</tag>
+    </tags>
+
   </sim>
 
 </PropertyList>
